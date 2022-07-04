@@ -24,8 +24,11 @@ def two_sum(nums, target):
     """
 
     positions = {}
-    for i, val in enumrate(nums):
+    print('nums: ', nums)
+    for i, val in enumerate(nums):
         if target - val in positions.keys():
             return [positions[target - val], i]
 
         positions[val] = i
+
+    return [-1, -1]

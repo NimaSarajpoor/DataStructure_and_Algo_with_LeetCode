@@ -1,8 +1,8 @@
-from two_sums import two_sums
+from two_sum import two_sum
 import numpy as np
 
 def test_two_sum():
-    a = np.random.rand(1000)
+    a = np.random.randint(0, high=1000)
     for m in range(2, 100):
         nums = np.random.choice(a, size=m, replace=False)
 
@@ -10,7 +10,7 @@ def test_two_sum():
         target = np.random.randint(10000, high=20000)
         nums[IDX[1]] = target - nums[IDX[0]]
 
-        comp = two_sums(nums, target)
+        comp = two_sum(nums, target)
 
         ref = np.sort(IDX).tolist()
         comp = sorted(comp)
