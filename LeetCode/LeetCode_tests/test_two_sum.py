@@ -1,3 +1,4 @@
+from ..LeetCode.two_sums import two_sums
 import numpy as np
 
 def test_two_sum():
