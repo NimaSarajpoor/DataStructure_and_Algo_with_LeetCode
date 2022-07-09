@@ -35,4 +35,5 @@ def len_longest_substr(s):
 
             sub_hash[s[i]] = i
 
-        return best_so_far
+        
+    return best_so_far
