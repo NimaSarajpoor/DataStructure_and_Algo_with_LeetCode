@@ -35,7 +35,7 @@ def longest_sub_palindrom(s):
     max_length = 1
     for i in range(len(s)-1):
         for j in range(i + 1, len(s)):
-            if i - j <= max_length:
+            if abs(i - j) <= max_length:
                 continue
             if s[i:j] == s[i:j][::-1]:
                 out = s[i:j]
