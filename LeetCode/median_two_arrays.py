@@ -24,12 +24,11 @@ def get_median_two_sorted_arrays(nums1, nums2):
     >>> get_median_two_sorted_arrays(nums1, nums2)
     4
     """
-    dummy_lst = [float('-inf'), float('inf')]
-    if len(nums1) == 0:
-        nums1 = dummy_lst
-    if len(nums2) == 0:
-        nums2 = dummy_lst
+    nums1.insert(0, float('-inf'))
+    nums1.append(float('inf'))
 
+    nums2.insert(0, float('-inf'))
+    nums2.append(float('inf'))
 
     n = len(nums1) + len(nums2)
     n_itr = math.floor(n / 2 + 1)
