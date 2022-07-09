@@ -84,7 +84,7 @@ def naive_longest_sub_palindrom_enhanced(s):
         # twin case
         if s[i] == s[i + 1]:
             j = 1
-            while (i - j > 0) and (i + 1 + j < len(s)):
+            while (i - j >= 0) and (i + 1 + j < len(s)):
                 if s[i - j] == s[i + 1 + j]:
                     j += 1
 
