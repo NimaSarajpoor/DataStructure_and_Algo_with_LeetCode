@@ -27,3 +27,7 @@ def test_last_same_as_first():
 def test_has_repeats():
     s = "abcdccfghijkf"
     assert len_longest_substr(s) == 7
+
+def test_long_s():
+    s = "abcdefghi" * 1000
+    assert len_longest_substr(s) == 9
