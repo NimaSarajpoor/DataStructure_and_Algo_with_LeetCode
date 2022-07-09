@@ -1,18 +1,18 @@
-from core import Node, Linkedlist
+from core import Node, LinkedList
 from add_two_numbers import add_two_numbers
 
 
 
 def test_add_linkedlist():
     lst_A = [1, 2, 3]
-    A = Linkedlist()
+    A = LinkedList()
     A.insert_from_list(lst_A)
 
     lst_B = [0]
-    B = Linkedlist()
+    B = LinkedList()
     B.insert_from_list(lst_B)
 
-    A_plus_B = Linkedlist()
+    A_plus_B = LinkedList()
     A_plus_B.root = add_two_numbers(A.root, B.root)
     comp = A_plus_B.convert_to_lst()
 
