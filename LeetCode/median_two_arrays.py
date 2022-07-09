@@ -1,3 +1,4 @@
+# link: https://leetcode.com/problems/median-of-two-sorted-arrays/
 import math
 def get_median_two_sorted_arrays(nums1, nums2):
     """
