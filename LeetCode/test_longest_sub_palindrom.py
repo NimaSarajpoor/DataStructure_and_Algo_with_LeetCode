@@ -1,4 +1,6 @@
 from longest_sub_palindrom import naive_longest_sub_palindrom
+from longest_sub_palindrom import naive_longest_sub_palindrom_enhanced
+
 
 def test_SingleElement():
     assert naive_longest_sub_palindrom("a") == "a"
