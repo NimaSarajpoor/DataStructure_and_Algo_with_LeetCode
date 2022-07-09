@@ -48,7 +48,7 @@ def get_median_two_sorted_arrays(nums1, nums2):
             current = nums2[j]
             j = j + 1
 
-    if n % 2:
+    if n % 2 == 0: # Even
         median = (prev + current) / 2
     else:
         median = current
