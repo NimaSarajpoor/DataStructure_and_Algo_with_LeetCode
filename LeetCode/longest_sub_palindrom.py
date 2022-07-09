@@ -76,6 +76,8 @@ def naive_longest_sub_palindrom_enhanced(s):
         while (i - j >= 0) and (i + j < len(s)):
             if s[i - j] == s[i + j]:
                 j += 1
+            else:
+                break
         max_length = max(prev_max_length, 2 * (j - 1) + 1)
         if max_length > prev_max_length:
             prev_max_length = max_length
@@ -87,6 +89,8 @@ def naive_longest_sub_palindrom_enhanced(s):
             while (i - j >= 0) and (i + 1 + j < len(s)):
                 if s[i - j] == s[i + 1 + j]:
                     j += 1
+                else:
+                    break
 
             max_length = max(prev_max_length, 2 * (j - 1) + 2)
             if max_length > prev_max_length:
