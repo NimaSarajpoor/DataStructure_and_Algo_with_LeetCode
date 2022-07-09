@@ -27,7 +27,8 @@ def len_longest_substr(s):
             sub_hash[s[i]] = i
             best_so_far = max(best_so_far, len(sub_hash.keys()))
         else:
-            for key in sub_hash.keys():
+            lst = list(sub_hash.keys())
+            for key in lst:
                 if key == s[i]:
                     del sub_hash[key]
                     break
@@ -35,5 +36,5 @@ def len_longest_substr(s):
 
             sub_hash[s[i]] = i
 
-        
+
     return best_so_far
