@@ -38,3 +38,6 @@ def len_longest_substr(s):
 
 
     return best_so_far
+
+# cleaner solution:
+# https://leetcode.com/problems/longest-substring-without-repeating-characters/discuss/1731/A-Python-solution-85ms-O(n)
