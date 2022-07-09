@@ -27,7 +27,7 @@ def test_add_linkedlist():
     A = LinkedList()
     A.insert_from_list(lst_A)
 
-    lst_B = [9 7 6]
+    lst_B = [9, 7, 6]
     B = LinkedList()
     B.insert_from_list(lst_B)
 
