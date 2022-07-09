@@ -20,18 +20,12 @@ def len_longest_substr(s):
     3
     because, the longest substring is "abc" whose length is 3.
     """
-    # abcabcbb
-    # a # ab # abcde....c
-
-    # a b c d e f c
-    # a-->b-->c-->d-->e-->f--> g --> c
-
     best_so_far = 0
     sub_hash = {}
     for i in range(len(s)):
         if s[i] not in sub_hash.keys():
             sub_hash[s[i]] = i
-            best_so_far = min(best_so_far, len(sub_hash.keys()))
+            best_so_far = max(best_so_far, len(sub_hash.keys()))
         else:
             for key in sub_hash.keys():
                 if key == s[i]:
