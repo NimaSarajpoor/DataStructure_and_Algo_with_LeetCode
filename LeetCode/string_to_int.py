@@ -15,6 +15,8 @@ def string_to_int(s):
 
     lst = [str(x) for x in range(10)]
     is_positive = True
+
+    num_str = ""
     for i, elem in enumerate(s):
         if elem == " ":
             continue
@@ -22,7 +24,6 @@ def string_to_int(s):
         if elem == "-":
             is_positive = False
 
-        num_str = ""
         if elem in lst:
             num_str += elem
 
