@@ -32,6 +32,7 @@ def zigzag_convertor(s, numRows=1):
         return s
 
     # calculate number of columns
+    # `n` is numRows.
     # n + n-2 + n + n-2 + n + n-2
     # 1 (n - 1) + 1
     # 2 (n - 1)
@@ -40,7 +41,7 @@ def zigzag_convertor(s, numRows=1):
     # 5 (n - 1) + 1
 
     n_s = len(s)
-    numCols = math.ceil((n_s - 1) / (n - 1))
+    numCols = math.ceil((n_s - 1) / (numRows - 1))
 
     lst = [[None] * numCols for _ in range(numRows)]
 
