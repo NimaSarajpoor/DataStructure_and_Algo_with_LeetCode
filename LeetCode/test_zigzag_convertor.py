@@ -18,3 +18,8 @@ def test_threeRows():
 def test_sameLengthRows():
     s = "simin"
     assert zigzag_convertor(s, numRows=len(s)) == "simin"
+
+
+def test_case1():
+    s = "PAYPALISHIRING"
+    assert zigzag_convertor(s, numRows=3) == "PAHNAPLSIIGYIR"
