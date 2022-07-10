@@ -23,3 +23,13 @@ def test_sameLengthRows():
 def test_case1():
     s = "PAYPALISHIRING"
     assert zigzag_convertor(s, numRows=3) == "PAHNAPLSIIGYIR"
+
+
+def test_case2():
+    s = "PAYPALISHIRING"
+    assert zigzag_convertor(s, numRows=4) == "PINALSIGYAHRPI"
+
+#
+#
+#
+#
