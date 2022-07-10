@@ -72,3 +72,5 @@ def zigzag_convertor(s, numRows=1):
                 encoded_s += lst[i][j]
 
     return encoded_s
+
+# cleaner solution: https://leetcode.com/problems/zigzag-conversion/discuss/3404/Python-O(n)-Solution-in-96ms-(99.43)
