@@ -1,6 +1,6 @@
 # link: https://leetcode.com/problems/longest-palindromic-substring/
 
-def naive_longest_sub_palindrom(s):
+def naive_longest_sub_palindrom(s): #time limit exceed in leetcode
     """
     finds the longest substring with palindromic property "NIMAMIN"
 
@@ -19,15 +19,6 @@ def naive_longest_sub_palindrom(s):
     >>> longest_sub_palindrom(s)
     "oozoo"
     """
-    # Example:
-    # a --> a
-    # ab --> a , b
-    # abb --> bb
-    # aab --> aa
-    # aaa --> aaa
-    # aba --> abas
-    # abccbcddddc --> cddddc
-
     if len(s) == 1:
         return s
 
@@ -46,7 +37,7 @@ def naive_longest_sub_palindrom(s):
     return s[out[0]:out[1]]
 
 
-def naive_longest_sub_palindrom_enhanced(s):
+def naive_longest_sub_palindrom_enhanced(s): # pass leetcode
     """
     This is the enhanced version of naive implementation
 
