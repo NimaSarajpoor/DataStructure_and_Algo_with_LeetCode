@@ -40,10 +40,13 @@ def zigzag_convertor(s, numRows=1):
     # 4 (n - 1)
     # 5 (n - 1) + 1
 
+    # k  >= n_s / (2n - 2)
+
+
     n_s = len(s)
-    numCols = math.ceil((n_s - 1) / (numRows - 1))
-    if numCols % 2 == 0:
-        numCols += 1
+
+    k = math.ceil(n_s / (2 * numRows - 2))
+    numCols = k * numRows
 
     lst = [[None] * numCols for _ in range(numRows)]
 
