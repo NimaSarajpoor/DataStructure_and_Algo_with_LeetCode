@@ -49,11 +49,13 @@ def zigzag_convertor(s, numRows=1):
 
     i = 0
     j = 0
+    print(f'numRows: {numRows}, numCols: {numCols}')
     for x in s:
+        print(f'i={i}, j={j} --> x={x}')
         lst[i][j] = x
 
-        r = j % numRows
-        if (r == 0 or r == numRows - 1) and (i < numRows - 1):
+        r = j % (numRows - 1)
+        if r == 0 and (i < numRows - 1):
             i += 1
         else:
             i = max(i - 1, 0)
