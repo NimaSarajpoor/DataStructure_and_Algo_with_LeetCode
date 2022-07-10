@@ -38,9 +38,9 @@ def reverse_int(x):
     else:
         # len(x_str_reversed) is exactly 10.
         for i, s in enumerate(x_str_reversed):
-            if int(s) == ref[i]:
+            if int(s) == int(ref[i]):
                 continue
-            elif int(s) < ref[i]:
+            elif int(s) < int(ref[i]):
                 out = coef * int(x_str_reversed)
                 break
             else:
