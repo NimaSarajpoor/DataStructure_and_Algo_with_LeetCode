@@ -42,6 +42,8 @@ def zigzag_convertor(s, numRows=1):
 
     n_s = len(s)
     numCols = math.ceil((n_s - 1) / (numRows - 1))
+    if numCols % 2 == 0:
+        numCols += 1
 
     lst = [[None] * numCols for _ in range(numRows)]
 
@@ -54,7 +56,7 @@ def zigzag_convertor(s, numRows=1):
         if (r == 0 or r == numRows - 1) and (i < numRows - 1):
             i += 1
         else:
-            i -= 1
+            i = max(i - 1, 0)
             j += 1
 
 
