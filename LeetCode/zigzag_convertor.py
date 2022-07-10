@@ -28,7 +28,7 @@ def zigzag_convertor(s, numRows=1):
     out: str
         encoded string through zigzag conversion
     """
-    if len(s) == 1 or numRows == 1:
+    if len(s) == 1 or numRows == 1 or numRows >= len(s):
         return s
 
     # calculate number of columns
