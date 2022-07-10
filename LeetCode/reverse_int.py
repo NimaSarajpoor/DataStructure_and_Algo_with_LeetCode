@@ -1,3 +1,5 @@
+# link: https://leetcode.com/problems/reverse-integer/submissions/
+
 def reverse_int(x):
     """
     reverse x. If it is outside of a signed 32-bit integer range, then
