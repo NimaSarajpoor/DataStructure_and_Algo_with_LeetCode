@@ -9,10 +9,12 @@ def test_positive():
 
 def test_positive_max():
     num = 2147483647
+    num = int(str(num)[::-1])
     assert reverse_int(num) == int(str(num)[::-1])
 
 def test_positive_max_exceeded():
     num = 2147483648
+    num = int(str(num)[::-1])
     assert reverse_int(num) == 0
 
 def test_negative_SingleDigit():
@@ -24,8 +26,10 @@ def test_negative():
 
 def test_negative_max():
     num = -2147483648
+    num = -1 * int(str(abs(num)[::-1]))
     assert reverse_int(num) == -1 * int(str(abs(num))[::-1])
 
 def test_negative_max_exceeded():
     num = -2147483649
+    num = -1 * int(str(abs(num)[::-1]))
     assert reverse_int(num) == 0
