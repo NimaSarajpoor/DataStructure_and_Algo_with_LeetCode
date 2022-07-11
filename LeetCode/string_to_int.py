@@ -14,8 +14,7 @@ def string_to_int(s):
         the integer that is the conversion of string
     """
 
-    lst = [str(x) for x in range(10)]
-    is_positive = True
+    lst = [str(x) for x in range(10)] # digits in str
 
     is_space = True
     for i, elem in enumerate(s):
@@ -26,18 +25,19 @@ def string_to_int(s):
     if is_space:
         return 0
 
+    # we have at least non-space character
     num_str = ""
     idx = i
     is_positive = True
     if s[idx] == "-":
         is_positive = False
+        start_idx = idx + 1
+    elif s[idx] == "+":
+        start_idx = idx + 1
     else:
-        if s[idx] in lst:
-            num_str += s[idx]
+        start_idx = idx
 
-
-
-    for j in range(idx + 1, len(s)):
+    for j in range(start_idx, len(s)):
         if s[j] in lst:
             num_str += s[j]
         else:
@@ -45,7 +45,6 @@ def string_to_int(s):
 
     if len(num_str) == 0:
         return 0
-
 
     max_val = 2147483647
     min_val = -2147483648
