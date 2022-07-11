@@ -1,3 +1,4 @@
+# link: https://leetcode.com/problems/string-to-integer-atoi/
 def string_to_int(s):
     """
     convert string to int.
@@ -16,16 +17,34 @@ def string_to_int(s):
     lst = [str(x) for x in range(10)]
     is_positive = True
 
-    num_str = ""
+    is_space = True
     for i, elem in enumerate(s):
-        if elem == " ":
-            continue
+        if elem != " ":
+            is_space = False
+            break
 
-        if elem == "-":
-            is_positive = False
+    if is_space:
+        return 0
 
-        if elem in lst:
-            num_str += elem
+    num_str = ""
+    idx = i
+    is_positive = True
+    if s[idx] == "-":
+        is_positive = False
+    else:
+        if s[idx] in lst:
+            num_str += s[idx]
+
+
+
+    for j in range(idx + 1, len(s)):
+        if s[j] in lst:
+            num_str += s[j]
+        else:
+            break
+
+    if len(num_str) == 0:
+        return 0
 
 
     max_val = 2147483647
@@ -57,6 +76,5 @@ def string_to_int(s):
             out = coef * int(ref_str)
         else:
             out = coef * int(num_str)
-
 
     return out
