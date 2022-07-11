@@ -43,6 +43,11 @@ def string_to_int(s):
         else:
             break
 
+    # remove leading zeros
+    for i, x in enumerate(num_str):
+        if x != "0":
+            break
+    num_str = num_str[i:]
     if len(num_str) == 0:
         return 0
 
@@ -63,9 +68,9 @@ def string_to_int(s):
         # num-of-digits is 10. need to be checked!
         is_greater = False
         for i, digit_str in enumerate(num_str):
-            if digit_str == ref_str:
+            if digit_str == ref_str[i]:
                 continue
-            elif digit_str < ref_str:
+            elif digit_str < ref_str[i]:
                 break
             else:
                 is_greater = True
