@@ -82,3 +82,14 @@ def string_to_int(s):
             out = coef * int(num_str)
 
     return out
+
+
+# cleaner code:
+# https://leetcode.com/problems/string-to-integer-atoi/discuss/647916/Python%3A-String-parsing-with-regex
+
+# note that we prefer to figure out if the string exceeds the range or not. It
+# is not reasonable to convert string to integer and then limit it to min/max
+# bounds.
+
+# learn how to use regex to parse strings.
+# Also see: https://www.youtube.com/watch?v=K8L6KVGG-7o
