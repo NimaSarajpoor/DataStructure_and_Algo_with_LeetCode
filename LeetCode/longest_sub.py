@@ -1,5 +1,6 @@
 # link: https://leetcode.com/problems/longest-substring-without-repeating-characters/
 
+
 def len_longest_substr(s):
     """
     find the length of the longst substring without repeating characters
@@ -36,8 +37,8 @@ def len_longest_substr(s):
 
             sub_hash[s[i]] = i
 
-
     return best_so_far
+
 
 # cleaner solution:
 # https://leetcode.com/problems/longest-substring-without-repeating-characters/discuss/1731/A-Python-solution-85ms-O(n)

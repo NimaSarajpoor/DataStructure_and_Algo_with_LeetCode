@@ -1,5 +1,6 @@
 from median_two_arrays import get_median_two_sorted_arrays
 
+
 def test_OneListEmpty():
     nums1 = []
     nums2 = [10, 20, 30]

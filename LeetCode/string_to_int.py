@@ -14,7 +14,7 @@ def string_to_int(s):
         the integer that is the conversion of string
     """
 
-    lst = [str(x) for x in range(10)] # digits in str
+    lst = [str(x) for x in range(10)]  # digits in str
 
     is_space = True
     for i, elem in enumerate(s):

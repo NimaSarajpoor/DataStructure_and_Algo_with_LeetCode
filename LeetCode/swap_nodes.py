@@ -23,5 +23,4 @@ def swap_nodes(head):
         prev_node = curr_node
         curr_node = tmp
 
-
     return head

@@ -1,6 +1,7 @@
 from two_sum import two_sum
 import numpy as np
 
+
 def test_two_sum():
     a = np.random.randint(150, high=1000)
     for m in range(2, 100):

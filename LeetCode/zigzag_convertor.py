@@ -1,6 +1,8 @@
 # link: https://leetcode.com/problems/zigzag-conversion/
 
 import math
+
+
 def zigzag_convertor(s, numRows=1):
     """
     encode string s by its zigzag version, and it works as follows:
@@ -42,7 +44,6 @@ def zigzag_convertor(s, numRows=1):
 
     # k  >= n_s / (2n - 2)
 
-
     n_s = len(s)
 
     k = math.ceil(n_s / (2 * numRows - 2))
@@ -52,9 +53,9 @@ def zigzag_convertor(s, numRows=1):
 
     i = 0
     j = 0
-    print(f'numRows: {numRows}, numCols: {numCols}')
+    print(f"numRows: {numRows}, numCols: {numCols}")
     for x in s:
-        print(f'i={i}, j={j} --> x={x}')
+        print(f"i={i}, j={j} --> x={x}")
         lst[i][j] = x
 
         r = j % (numRows - 1)
@@ -64,7 +65,6 @@ def zigzag_convertor(s, numRows=1):
             i = max(i - 1, 0)
             j += 1
 
-
     encoded_s = ""
     for i in range(numRows):
         for j in range(numCols):
@@ -72,5 +72,6 @@ def zigzag_convertor(s, numRows=1):
                 encoded_s += lst[i][j]
 
     return encoded_s
+
 
 # cleaner solution: https://leetcode.com/problems/zigzag-conversion/discuss/3404/Python-O(n)-Solution-in-96ms-(99.43)

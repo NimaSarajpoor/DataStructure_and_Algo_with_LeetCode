@@ -28,7 +28,7 @@ def three_sum_closest(nums, target):
         i = idx + 1
         j = len(nums) - 1
 
-        for _ in range(len(nums)): # upper bound for number of iterations
+        for _ in range(len(nums)):  # upper bound for number of iterations
             if i >= j:
                 break
 
@@ -36,7 +36,7 @@ def three_sum_closest(nums, target):
             net_val = s - target
             if abs(net_val) < closest_so_far:
                 closest_so_far = abs(net_val)
-                out =  s
+                out = s
 
             if net_val == 0:
                 return out

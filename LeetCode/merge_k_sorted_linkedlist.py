@@ -1,5 +1,6 @@
 from merge_two_sorted_linkedlist import mergeTwoLists
 
+
 def merge_linkedlists(lists):
     head = None
     for i in range(len(lists)):

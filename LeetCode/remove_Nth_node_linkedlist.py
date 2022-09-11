@@ -1,5 +1,6 @@
 # link: https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 
+
 def removeNthFromEnd(head, n):
     """
     Given the head of a linkedlist, remove its nth node from the end, and return

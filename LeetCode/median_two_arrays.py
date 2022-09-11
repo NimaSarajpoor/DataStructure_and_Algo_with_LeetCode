@@ -1,5 +1,7 @@
 # link: https://leetcode.com/problems/median-of-two-sorted-arrays/
 import math
+
+
 def get_median_two_sorted_arrays(nums1, nums2):
     """
     find the median of two sorted arrays nums1 and nums2 after being merged into
@@ -25,11 +27,11 @@ def get_median_two_sorted_arrays(nums1, nums2):
     >>> get_median_two_sorted_arrays(nums1, nums2)
     4
     """
-    nums1.insert(0, float('-inf'))
-    nums1.append(float('inf'))
+    nums1.insert(0, float("-inf"))
+    nums1.append(float("inf"))
 
-    nums2.insert(0, float('-inf'))
-    nums2.append(float('inf'))
+    nums2.insert(0, float("-inf"))
+    nums2.append(float("inf"))
 
     n = len(nums1) + len(nums2)
     n_itr = math.floor(n / 2 + 1)
@@ -37,7 +39,7 @@ def get_median_two_sorted_arrays(nums1, nums2):
     # -np.inf, np.inf
     i = 0
     j = 0
-    current = float('-inf')
+    current = float("-inf")
     for _ in range(n_itr):
         if nums1[i] <= nums2[j]:
             prev = current
@@ -48,7 +50,7 @@ def get_median_two_sorted_arrays(nums1, nums2):
             current = nums2[j]
             j = j + 1
 
-    if n % 2 == 0: # Even
+    if n % 2 == 0:  # Even
         median = (prev + current) / 2
     else:
         median = current

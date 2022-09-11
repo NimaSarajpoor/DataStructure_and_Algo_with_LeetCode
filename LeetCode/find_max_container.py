@@ -29,5 +29,3 @@ def find_max_container(height):
         out = max(out, v)
 
     return out
-
-    

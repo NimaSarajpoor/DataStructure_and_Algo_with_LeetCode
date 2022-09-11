@@ -1,6 +1,7 @@
 # https://leetcode.com/problems/merge-two-sorted-lists/
 from core import Node
 
+
 def mergeTwoLists(list1, list2):
     """
     Given the head of two sorted linkedlist, merge them and return the head of

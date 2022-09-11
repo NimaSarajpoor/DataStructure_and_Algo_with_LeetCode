@@ -1,6 +1,7 @@
 # link: https://leetcode.com/problems/add-two-numbers/
 from core import Node, LinkedList
 
+
 def add_two_numbers(root_A, root_B):
     """
     add two linkedlist as traverse them from root and store
@@ -24,7 +25,7 @@ def add_two_numbers(root_A, root_B):
     So, output is: 4 --> 3 --> 9 --> None
 
     """
-    dummy = LinkedList() # tip: we start with dummy, and we return dummy.next
+    dummy = LinkedList()  # tip: we start with dummy, and we return dummy.next
     # as the root!
     dummy.root = Node(0)
     current_node = dummy.root

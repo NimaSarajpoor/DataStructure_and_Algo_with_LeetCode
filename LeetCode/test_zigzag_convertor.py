@@ -8,8 +8,10 @@ def test_singleletter():
 def test_singleRow():
     assert zigzag_convertor("simin") == "simin"
 
+
 def test_twoRows():
     assert zigzag_convertor("simin", numRows=2) == "smnii"
+
 
 def test_threeRows():
     assert zigzag_convertor("simin", numRows=3) == "sniim"
@@ -28,6 +30,7 @@ def test_case1():
 def test_case2():
     s = "PAYPALISHIRING"
     assert zigzag_convertor(s, numRows=4) == "PINALSIGYAHRPI"
+
 
 #
 #

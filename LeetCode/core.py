@@ -3,6 +3,7 @@ class Node:
         self.val = val
         self.next = next
 
+
 # linkedlist
 class LinkedList:
     def __init__(self):

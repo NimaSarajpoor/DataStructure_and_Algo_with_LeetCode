@@ -2,7 +2,6 @@ from core import Node, LinkedList
 from add_two_numbers import add_two_numbers
 
 
-
 def test_add_linkedlist_edgecase():
     lst_A = [1, 2, 3]
     A = LinkedList()
@@ -19,7 +18,6 @@ def test_add_linkedlist_edgecase():
     ref = int("".join([str(x) for x in lst_A])) + int("".join([str(x) for x in lst_B]))
 
     assert ref == int("".join([str(x) for x in comp[::-1]]))
-
 
 
 def test_add_linkedlist():

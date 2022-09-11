@@ -1,6 +1,7 @@
 # link: https://leetcode.com/problems/longest-palindromic-substring/
 
-def naive_longest_sub_palindrom(s): #time limit exceed in leetcode
+
+def naive_longest_sub_palindrom(s):  # time limit exceed in leetcode
     """
     finds the longest substring with palindromic property "NIMAMIN"
 
@@ -22,9 +23,9 @@ def naive_longest_sub_palindrom(s): #time limit exceed in leetcode
     if len(s) == 1:
         return s
 
-    out = [0, 1] # start, stop
+    out = [0, 1]  # start, stop
     max_length = 1
-    for i in range(len(s)-1):
+    for i in range(len(s) - 1):
         if len(s) - i <= max_length:
             break
         for j in range(i + 1, len(s) + 1):
@@ -34,10 +35,10 @@ def naive_longest_sub_palindrom(s): #time limit exceed in leetcode
                 out = [i, j]
                 max_length = j - i
 
-    return s[out[0]:out[1]]
+    return s[out[0] : out[1]]
 
 
-def naive_longest_sub_palindrom_enhanced(s): # pass leetcode
+def naive_longest_sub_palindrom_enhanced(s):  # pass leetcode
     """
     This is the enhanced version of naive implementation
 
@@ -58,9 +59,8 @@ def naive_longest_sub_palindrom_enhanced(s): # pass leetcode
     >>> longest_sub_palindrom(s)
     "oozoo"
     """
-    out = [0, 1] #start, stop
+    out = [0, 1]  # start, stop
     prev_max_length = 1
-
 
     for i in range(len(s) - 1):
         j = 1
@@ -88,5 +88,4 @@ def naive_longest_sub_palindrom_enhanced(s): # pass leetcode
                 prev_max_length = max_length
                 out = [i - (j - 1), i + 1 + j]
 
-
-    return s[out[0]:out[1]]
+    return s[out[0] : out[1]]

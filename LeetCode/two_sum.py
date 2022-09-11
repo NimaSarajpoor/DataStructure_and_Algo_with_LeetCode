@@ -1,5 +1,6 @@
 # link: https://leetcode.com/problems/two-sum/
 
+
 def two_sum(nums, target):
     """
     this function gets a list of integers `nums` and return indices of two
@@ -24,7 +25,7 @@ def two_sum(nums, target):
     """
 
     positions = {}
-    print('nums: ', nums)
+    print("nums: ", nums)
     for i, val in enumerate(nums):
         if target - val in positions.keys():
             return [positions[target - val], i]

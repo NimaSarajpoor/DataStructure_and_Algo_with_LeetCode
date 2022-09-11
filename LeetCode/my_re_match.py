@@ -23,7 +23,6 @@ def my_re_match(s, p):
     """
     # need to find all possible branches
 
-
     # "abcdefg"
     # "xxxxxxx"
     # "xxx.xxxx"

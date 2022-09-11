@@ -21,6 +21,7 @@ def letter_combinations(digits):
     lst : List
         a list of strings where each string can be represnted by `digits`
     """
+
     def letter_combinations_helper(digits, lst, mapper):
         if len(digits) == 0:
             return lst
@@ -36,7 +37,6 @@ def letter_combinations(digits):
 
         return letter_combinations_helper(digits[:-1], lst_new, mapper)
 
-
     mapper = {
         "2": "abc",
         "3": "def",
@@ -45,10 +45,11 @@ def letter_combinations(digits):
         "6": "mno",
         "7": "pqrs",
         "8": "tuv",
-        "9": "wxyz"
+        "9": "wxyz",
     }
     lst = letter_combinations_helper(digits, [], mapper)
 
     return lst
+
 
 # cleaner?

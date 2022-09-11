@@ -1,6 +1,7 @@
 # link: https://leetcode.com/problems/merge-k-sorted-lists/
 from core import Node
 
+
 def merge_k_sorted_linkedlist(L):
     """
     merge k sorted linkedlist and return its head

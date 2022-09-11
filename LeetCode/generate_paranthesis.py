@@ -1,5 +1,6 @@
 # link: https://leetcode.com/problems/generate-parentheses/
 
+
 def generate_parenthesis(n):
     """
     for `n` pair of paranthesis, returns all possible valid

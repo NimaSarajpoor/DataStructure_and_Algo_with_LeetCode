@@ -1,5 +1,6 @@
 # link: https://leetcode.com/problems/valid-parentheses/
 
+
 def is_valid_paranthesis(s):
     """
     for a string `s` consisting of characters "(, ), [, ], {, }", return a boolean
@@ -22,11 +23,11 @@ def is_valid_paranthesis(s):
     out : bool
         True if `s` is a valid paranthesis. False otherwise.
     """
-    lst = [] # stack
+    lst = []  # stack
     mapper = {
-        ')':'(',
-        '}':'{',
-        ']':'[',
+        ")": "(",
+        "}": "{",
+        "]": "[",
     }
 
     if len(s) % 2 == 1:
